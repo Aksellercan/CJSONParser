@@ -16,6 +16,7 @@ void loop_tokens(Token *token_buffer, size_t buffer_length)
     }
 }
 
+//TODO seperate intno multiple functions and make token buffer smaller to avoid fprintf segmentation fault
 Token *lexer_analysis(char *buffer)
 {
     size_t buffer_length = stringLength(buffer);

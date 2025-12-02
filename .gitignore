@@ -1,3 +1,7 @@
 .cache
 build/
 build/*
+parse.json
+output_map.txt
+.vscode/*
+.vscode/
