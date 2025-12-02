@@ -17,7 +17,9 @@ int main() {
     Token *token_buffer = lexer_analysis(file_buffer);
     size_t buffer_length = stringLength(file_buffer);
     loop_tokens(token_buffer, buffer_length);
-    save_to_file(token_buffer, buffer_length);
+    if (save_to_file(token_buffer, buffer_length) < 0) {
+        error_handler("Failed to write tokens to file");
+    } 
     free(token_buffer);
     return 0;
 }

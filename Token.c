@@ -79,6 +79,7 @@ bool is_token_key_or_value(TokenKind token_kind)
     // return token_kind != VALUE || token_kind != KEY;
 }
 
+//causes segmentation fault when called in fprintf
 char* get_token_kind(TokenKind token_kind)
 {
     switch (token_kind)
